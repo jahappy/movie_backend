@@ -20,11 +20,16 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+	implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.3.8.RELEASE'
+	implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.30.Final'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1'
+	compile 'org.mariadb.jdbc:mariadb-java-client:2.5.4'
 }
 
 test {
